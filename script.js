@@ -25,10 +25,10 @@ window.onload = function(){
 	getWord();
 	button.addEventListener('click', function(){
 		if (input.value == word) {
-			count++;
 			out.innerHTML = 'Правильно! Угадано ' + count + ' из ' + wordAmount + '.';
-			i++;
-			getWord();
+			count++; // увеличиваем количество угаданных слов
+			i++; // переходим к слудующему слову
+			getWord(); 
 		} else {
 			input.value = '';
 			out.innerHTML = 'Попробуйте ввести другое слово!';
